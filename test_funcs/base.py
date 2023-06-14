@@ -43,7 +43,7 @@ class TestFunction:
         y = []
         for i in range(size):
             x = np.array([np.random.choice(self.config[_]) for _ in range(self.dim)])
-            y.append(self.compute(x, normalize=False, ))
+            y.append(self.compute(x, normalize=False, ).numpy())
         y = np.array(y)
         return np.mean(y), np.std(y)
 
